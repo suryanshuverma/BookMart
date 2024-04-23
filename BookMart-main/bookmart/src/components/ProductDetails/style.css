@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+:root {
+  --primary-color: #90e0ef;
+  --secondary-color: #00b4d5;
+  --tertiary-color: #0077b6;
+  --yellow-color: #ffb900;
+  --gray-color: #808080;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.contain {
+  background-image: linear-gradient(grey);
+  background-color: #d3d3d3;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.hiddenData{
+  color: #808080;
+}
+.hiddenData:hover{
+  color: #00b4d5;
+}
+
+
+.box {
+  position: relative;
+  background-color: white;
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+  padding: 45px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 50px;
+  margin: 15px 0;
+  width: 780px;
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "images info"
+    "images description";
+  grid-gap: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.box .basic-info div {
+ text-decoration: line-through;
+  color: var(--gray-color);
+  font-size: 18px;
+}
+.box .basic-info .inline {
+  display: inline;
+}
+.box .images {
+  grid-area: images;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "active active active"
+    "idle idle idle";
+  grid-gap: 5px;
+}
+
+.box .images .img-holder img {
+  object-fit: fill;
+
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  border: solid 2px black;
+}
+
+.box .images .img-holder.active {
+  grid-area: active;
+}
+
+.box .images .img-holder:not(.active):hover {
+  opacity: 0.95;
+  cursor: pointer;
+}
+
+.box .basic-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.box .basic-info .rate {
+  color: var(--yellow-color);
+}
+
+.box .basic-info span {
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.box .basic-info .green {
+  color: green;
+}
+
+.box .basic-info .options .btn {
+  cursor: pointer;
+  color: #fff;
+  margin-left: 0px;
+  margin-right: 25px;
+  display: inline-block;
+}
+
+.options .btn:first-of-type {
+  background: #f64749;
+}
+.options .btn:last-of-type {
+  background: #f64749;
+}
+.options .btn:hover {
+  opacity: 0.9;
+}
+
+
+.box .basic-info .options a:hover {
+  background-color: var(--tertiary-color);
+}
+
+.box .description {
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.box .description p {
+  color: var(--gray-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.box .description .features {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  color: black;
+  padding-left: 0px;
+  font-size: 18px;
+}
+
+.box .description .features li {
+  padding-left: 0px;
+
+  font-weight: 600;
+}
+
+.box .description .features span {
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.box .description .social {
+  list-style: none;
+  display: flex;
+}
+
+.box .description .social a {
+  margin-right: 15px;
+  color: var(--gray-color);
+}
+
+.box .description .social a:hover {
+  color: var(--secondary-color);
+}
+.deletewishlistbutton{
+  float: right;
+   
+    width: 40px;
+    background-color: #c2bfbf;
+    border: none;
+    border-radius: 4px;
+  }
+  .fa-trash{
+    color: white;
+  }
+.back-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e1e1e1;
+}
+
+.back-button i {
+  font-size: 18px;
+  color: #555555;
+}
+@media (max-width: 991px) {
+  .box {
+    width: 750px;
+    grid-template-areas:
+      "info info"
+      "images description";
+  }
+  .box .basic-info .options a {
+    padding: 8.5px 12px;
+  }
+  
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+  .box .basic-info span {
+    position: absolute;
+    align-self: flex-end;
+  }
+  .box .basic-info .options {
+    position: absolute;
+    align-self: flex-end;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 600px;
+    grid-template-areas:
+      "images info"
+      "description description";
+  }
+  .box .images {
+    gap: 3px;
+  }
+  .box .images .img-holder img {
+    border-radius: 5px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .box {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 35px;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "images"
+      "info"
+      "description";
+  }
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  outline: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100%, 100%;
+  border-radius: 20%;
+  border: 1px solid black;
+}

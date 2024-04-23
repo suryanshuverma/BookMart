@@ -1,0 +1,11 @@
+
+.emptyWishlistImg{
+  height: 450px;
+  width: 100%;
+  margin-top: 25px;
+}
+@media (max-width: 751px) {
+.emptyWishlistImg{
+  margin-top: 50px;
+}
+}

@@ -1,0 +1,361 @@
+.navbar-container {
+  box-sizing: border-box;
+  height: 100px;
+  width: 100%;
+  /* background-color: rgb(235, 230, 230); */
+background: linear-gradient(120deg, #4b5f6b, #5a3c66);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #f4eee0;
+  padding: 10px;
+  justify-content: space-between;
+  position: relative;
+}
+site-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:5px;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.icon-img{
+  height: 50px;
+  width: 47px;
+}
+.input-box {
+  border: none;
+  height: 40%;
+  width: 25%;
+  border-radius: 5px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 0;
+}
+.links a{
+  color:#f4eee0;
+}
+.links a:hover{
+  color: #d6d1c4;
+}
+
+.links-container {
+  position: relative;
+}
+
+.links-container .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+}
+
+.links-container:hover .dropdown-menu {
+  display: block;
+}
+
+.links-container .dropdown-menu li {
+  margin: 5px 0;
+}
+
+.links-container .dropdown-menu li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+.links-container .dropdown-menu li a:hover{
+  color: #5c5a5a;
+}
+
+ul li {
+  list-style-type: none;
+  display: block;
+  cursor: pointer;
+  margin: 5px;
+  display: block;
+  padding: 10px;
+}
+
+.icons {
+  display: none;
+  position: relative;
+  margin-right: 10px;
+}
+.cross {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.active {
+  display: block;
+}
+.sidebar-links {
+  display: none;
+}
+.MuiButton-outlined {
+border-color: #f4eee0 !important;
+}
+@media only screen and (max-width: 750px) {
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    background-color: #393646;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #f4eee0;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 100;
+  }
+ site-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:5px;
+  font-size: 1.5rem;
+}
+.icon-img{
+  height: 50px;
+  width: 47px;
+}
+  input {
+    border: none;
+    height: 40%;
+    width: 30%;
+    border-radius: 5px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: px;
+  }
+  ul li {
+    list-style-type: none;
+    display: block;
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+    padding: 10px;
+  }
+
+  .icons {
+    display: block;
+    position: relative;
+    margin-right: 10px;
+  }
+  .links-container {
+    display: none;
+  }
+  .bars {
+    cursor: pointer;
+    display: none;
+  }
+  .cross {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    transform: translateX(-22px);
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  .sidebar {
+    overflow: hidden;
+    width: 25%;
+    position: absolute;
+    top: 100px;
+    height: 50vh;
+    border-bottom-left-radius: 100px;
+    background-color: #d9d9d9;
+    position: fixed;
+    right: -25%;
+    transition: all 0.5s ease;
+    z-index: 10;
+  }
+  .sidebar-active {
+    right: 0;
+  }
+
+  .sidebar-links {
+    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .sidebar-links li {
+    display: block;
+    background-color: #d9d9d9;
+    margin: 0 0 0 0px;
+    padding: 0;
+    height: 50px;
+  }
+  .sidebar-links li a {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .overlay {
+    cursor: pointer;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    background-color: #00000047;
+    z-index: 9;
+    display: none;
+  }
+  .active-overlay {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    background-color: #393646;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #f4eee0;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 100;
+  }
+ site-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:5px;
+  font-size: 1.3rem;
+}
+.icon-img{
+  height: 45px;
+  width: 42px;
+}
+  input {
+    border: none;
+    height: 40%;
+    width: 30%;
+    border-radius: 5px;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: px;
+  }
+  ul li {
+    list-style-type: none;
+    display: block;
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+    padding: 10px;
+  }
+
+  .icons {
+    display: block;
+    position: relative;
+    margin-right: 10px;
+  }
+  .links-container {
+    display: none;
+  }
+  .bars {
+    cursor: pointer;
+    display: none;
+  }
+  .cross {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    transform: translateX(-22px);
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+  .sidebar {
+    overflow: hidden;
+    width: 50%;
+    position: absolute;
+    top: 100px;
+    height: 50vh;
+    border-bottom-left-radius: 100px;
+    background-color: #d9d9d9;
+    position: fixed;
+    right: -50%;
+    transition: all 0.5s ease;
+    z-index: 10;
+  }
+  .sidebar-active {
+    right: 0;
+  }
+ 
+  .sidebar-links {
+    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .sidebar-links li {
+    display: block;
+    background-color: #d9d9d9;
+    margin: 0 0 0 0px;
+    padding: 0;
+    height: 50px;
+  }
+  .sidebar-links li a {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  .sidebar-links li a:hover {
+    background-color: #cacaca;
+  }
+
+  .overlay {
+    cursor: pointer;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    background-color: #00000047;
+    z-index: 9;
+    display: none;
+  }
+  .active-overlay {
+    display: block;
+  }
+}
